@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thejas G R</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+    <script>
+        function displayToast() {
+            const toastExample = document.getElementById('contactMeToast')
+            const toast = new bootstrap.Toast(toastExample)
+            toast.show()
+        }
+    </script>
+    <style>
+        html,
+        body {
+            min-height: 100% !important;
+            height: 100%;
+        }
+
+        .content {
+            display: flex;
+            height: 100%;
+
+        }
+
+        .sideBar {
+            background: #ffffff;
+            box-shadow: 3px 3px 6px 0px rgb(0 0 0 / 15%);
+        }
+
+
+        .headerText {
+            margin: 25px 30px;
+            text-align: left;
+            /* background-color: darkgreen; */
+        }
+
+        .sideBarNav {
+            display: block;
+            margin-top: 100px;
+        }
+
+        div ul {
+            /* list-style-type: none; */
+            margin: 0;
+            padding: 0 30px;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            font-size: 1.1em;
+            list-style: none;
+            margin: 10px 0;
+            width: 100%;
+        }
+
+        .mainContentHeader {
+            height: 150px;
+            background-color: #ffcd24;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .sections {
+            width: 91%;
+            margin: 10px 0px;
+            min-height: 200px;
+        }
+
+        .cardWithSection {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            height: 550px;
+            overflow-y: scroll;
+        }
+
+        .contactBtn {
+            height: 45px;
+            margin-right: 20px;
+        }
+
+        .mainContent header {
+            display: flex;
+            align-items: center;
+        }
+
+        .footerClass {
+            padding: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            position: absolute;
+            bottom: 0;
+        }
+
+
+        @media screen and (max-width:1024px) {
+            .headerText {
+                margin-left: 10px;
+            }
+        }
+
+        @media screen and (max-width:1368px) {
+            .footerClass>* {
+                width: 100%;
+                padding: 0 20px;
+            }
+        }
+
+        @media screen and (max-width:992px) {
+            .content {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .sideBar {
+                width: 100%;
+                display: flex;
+                height: auto;
+                /* height: 280px !important; */
+                flex-wrap: wrap;
+            }
+
+            .mainContent {
+                width: 100%;
+            }
+
+            .headerText {
+                text-align: center;
+                width: 100%;
+                margin: 0;
+                height: 75px;
+            }
+
+            .navBarPortfolio {
+                margin-bottom: 100px;
+            }
+
+            .footerClass {
+                padding: 5px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                /* position: absolute; */
+                /* bottom: 0; */
+            }
+        }
+    </style>
+</head>
+
+<body class="container-fluid" style="margin: 0; display:flex; padding: 0; width: 100%;
+flex-wrap: wrap;">
+    <div class="content">
+        <div class="sideBar col-2" style="height:100% ;">
+            <header class="headerText">
+                <h3>Thejas <br> Ganjigunte <br> Ramesh</h3>
+            </header>
+            <nav class="navbar navbar-expand-sm navBarPortfolio">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#AboutMe">About ME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#Education">Education</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#TechnicalSkills">Technical skills</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#WorkExperience">Work Experience</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <footer class="footerClass">
+                <p>
+                    &copy; NEU 2022
+                </p>
+                <div class="dropdown" style="margin: 5px 0 0 20px;">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+                        data-bs-toggle="dropdown" aria-expanded="false" data-bs-toggle="modal"
+                        data-bs-target="#exampleModal">
+                        Feedback
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Loved
+                                it</button></li>
+                        <li><button class="dropdown-item" type="button" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">Hated it</button></li>
+                    </ul>
+                </div>
+            </footer>
+        </div>
+        <div class="mainContent col-10">
+            <header class="col-12 mainContentHeader">
+                <a href="mailTo:ganjigunteramesh.t@northeastern.edu" class="link-primary contactBtn"
+                    onclick="displayToast()">Mail
+                    me</a>
+                <a href="tel:+1234567890" class="link-primary contactBtn" onclick="displayToast()">Call me</a>
+
+            </header>
+            <main class="cardWithSection">
+                <div class="card sections" id="AboutMe" data-bs-toggle="tooltip" data-bs-placement="top"
+                    title="Want more information? Try the contact me section">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            About Me
+                        </h5>
+                        <p class="card-text">
+                            Graduate student at Northeastern University with 3 years of Industry experience. A Critical
+                            thinking Software engineer solving complex business & social problems and learning along the
+                            way.
+                        </p>
+                    </div>
+                </div>
+                <div class="card sections" id="Education">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Education
+                        </h5>
+                        <p class="card-text">
+                            Bachelor of Engineering in Information Science and Engineering from Visvesvaraya
+                            Technological University
+                        </p>
+                    </div>
+                </div>
+                <div class="card sections" id="TechnicalSkills">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Technical Skills
+                        </h5>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseOne" aria-expanded="false"
+                                        aria-controls="flush-collapseOne">
+                                        Java
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseOne" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body"> Worked on academic projects with
+                                        <code>Java, Spring Boot</code>.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseTwo" aria-expanded="false"
+                                        aria-controls="flush-collapseTwo">
+                                        JavaScript
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseTwo" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Worked on a retail banking cross-platform mobile
+                                        application in
+                                        <code>Kony viusalizer using basic Javascript</code>.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion accordion-flush" id="accordionFlushExample">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="flush-headingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                        aria-controls="flush-collapseThree">
+                                        React Native and Angular
+                                    </button>
+                                </h2>
+                                <div id="flush-collapseThree" class="accordion-collapse collapse"
+                                    aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                                    <div class="accordion-body">Worked on 2 mobile and web applications using
+                                        <code>React Native and Angular</code> .
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card sections" id="WorkExperience">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            Work Experience
+                        </h5>
+                        <p class="card-text">
+                        <ul class="list-group">
+                            <li class="list-group-item">
+                                <h4>Software Engineer, Front-End Developer at Accenture Solutions Pvt. Ltd, Bengaluru,
+                                    India
+                                </h4>
+                            </li>
+                            <li class="list-group-item">Led 2 web releases as lead developer and was part of 4 major
+                                releases
+                            </li>
+                            <li class="list-group-item">Main Point of Contact between management and development teams
+                                for 2 releases
+                            </li>
+                            <li class="list-group-item">Proposed and built a proof-of-concept mobile app for overhauling
+                                inventory management
+                                using React native and Microsoft code push for dynamic updates helping improve
+                                inter-project device exchange</li>
+                            <li class="list-group-item">
+                                Developed a cross platform mobile application leveraging Temenos Visualizer reducing
+                                development cost by 50% and improved upon time to market for the application
+                            </li>
+                            <li class="list-group-item">
+                                Created a CLI theming feature for Angular web application using SCSS and JavaScript
+                                providing 3 different theming options to a single base project
+                            </li>
+                            <li class="list-group-item">
+                                Collaborated with teams working in an Agile environment using JIRA and GIT from the
+                                United States, UAE, Malaysia and across multiple cities across India for successful
+                                project development and releases
+                            </li>
+                        </ul>
+                        </p>
+                    </div>
+                </div>
+
+            </main>
+        </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div id="contactMeToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+            <div class="toast-header">
+                <strong class="me-auto">Thank you for contacting me</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+            <div class="toast-body">
+                I will be get in touch with you soon
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Thanks</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    Thanks you for the feedback
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
